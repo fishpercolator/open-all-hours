@@ -19,9 +19,9 @@ export default {
       this.setSnack(this.snackName)
       this.$router.push('/')
     },
-    ...mapMutations([
-      'setSnack'
-    ])
+    ...mapMutations({
+      setSnack: 'snackbar/setSnack'
+    })
   }
 }
 </script>

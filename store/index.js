@@ -1,13 +1,9 @@
 export const state = () => ({
-  sidebar: false,
-  snack: ''
+  sidebar: false
 })
 
 export const mutations = {
   toggleSidebar (state) {
     state.sidebar = !state.sidebar
-  },
-  setSnack (state, snack) {
-    state.snack = snack
   }
 }

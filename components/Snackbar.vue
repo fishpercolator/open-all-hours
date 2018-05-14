@@ -14,12 +14,12 @@ export default {
     }
   },
   created: function () {
-    this.$store.watch(state => state.snack, () => {
-      const msg = this.$store.state.snack
+    this.$store.watch(state => state.snackbar.snack, () => {
+      const msg = this.$store.state.snackbar.snack
       if (msg !== '') {
         this.show = true
-        this.message = this.$store.state.snack
-        this.$store.commit('setSnack', '')
+        this.message = this.$store.state.snackbar.snack
+        this.$store.commit('snackbar/setSnack', '')
       }
     })
   }
